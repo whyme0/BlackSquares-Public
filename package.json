@@ -1,0 +1,7 @@
+{
+  "devDependencies": {
+    "del": "6.1.1",
+    "eslint": "^9.17.0",
+    "gulp": "4.0.2"
+  }
+}

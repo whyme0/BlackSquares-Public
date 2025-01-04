@@ -1,0 +1,30 @@
+﻿@using BlackSquares.Models;
+
+@{
+    ViewData["Title"] = "Все картинки";
+    var memeList = ViewData["memesList"] as List<Meme>;
+}
+
+@{
+    if(memeList.Count() == 0)
+    {
+        <p class="h3">Здесь еще нет ни одной картинки. Но давайте это исправим!</p>
+        <p class="h5">Создать новый мем можно <a asp-action="Create" asp-controller="Home">тут</a>.</p>
+    }
+    else
+    {
+    <h1 class="h1 text-center">Список мемов</h1>
+    <div class="row">
+        @foreach(var meme in memeList)
+        {
+            {
+                <div class="col-md-4 my-4">
+                    <a href="@meme.ImageUrl" target="_blank">
+                        <img src="@meme.ImageUrl" class="img-fluid img-thumbnail rounded">
+                    </a>
+                </div>
+            }
+        }
+    </div>
+    }
+}

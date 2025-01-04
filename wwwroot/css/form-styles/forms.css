@@ -1,0 +1,23 @@
+﻿.field_wrapper {
+    position: relative;
+}
+
+.field__input {
+    padding: 13px;
+}
+
+.field__input:not(:placeholder-shown) + .field__label {
+    background: #fff;
+    transform: translate(0, -50%);
+    opacity: 1;
+}
+
+.field__label {
+    /* Position the label */
+    left: 8px;
+    position: absolute;
+    top: 0;
+    /* Hide it by default */
+    opacity: 0;
+    transition: all 200ms;
+}
